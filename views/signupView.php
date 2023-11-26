@@ -12,13 +12,13 @@
     "
   >
     <!--Nav Bar-->
-    <?php require_once('../public/navbar.php') ?>
+    <?php require_once('../navbar.php') ?>
 
     <h2 id="HeadLine">REGISZTRÁCIÓ</h2>
 
     <div id="divs">
       <form
-        action="index.php?action=register"
+        action="process-sign-up.php"
         method="POST"
         id="sign-up-form"
         onsubmit="return validateForm()">

@@ -1,4 +1,4 @@
-<?php require_once('../public/session.php') ?>
+<?php require_once('../views/session.php') ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +13,7 @@
     "
   >
 
-  <?php require_once('../public/navbar.php') ?>
+  <?php require_once('../navbar.php') ?>
     <br>
     <h1>MAGYARORSZÁG SZÉLERŐMŰVEI</h1>
 
@@ -39,14 +39,6 @@
       </p>
     </div>
 
-    <div class="homeButtons">
-      <a href="../views/currencyView.php">
-        <button id="homeClick">
-          Hírek
-          <img id="buttonImage" src="../public/images/currencyIcon.png" />
-        </button>
-      </a>
-    </div>
 
     <!--Footer-->
 

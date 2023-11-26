@@ -1,3 +1,33 @@
+<?php
+    $host = 'localhost';
+    $dbname = 'szeleromuvek'; 
+    $username = 'root';
+    $password = '';
+    $is_invalid = false;
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $mysqli = new mysqli($host, $username, $password, $dbname);
+
+        $sql = sprintf('SELECT * FROM felhasznalok WHERE Felhasznalonev = "%s"', $mysqli -> real_escape_string($_POST["username"]));
+
+        $result = $mysqli -> query($sql);
+
+        $user = $result -> fetch_assoc();
+
+        if ($user) {
+          if ($_POST["password"] === $user["Jelszo"]) {
+              session_start();
+      
+              $_SESSION["user_id"] = $user["id"];
+              header('Location: homeView.php');
+              exit;
+          }
+      }
+
+        $is_invalid = true;
+    }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,11 +42,11 @@
     "
   >
     <!--Nav Bar-->
-    <?php require_once('../public/navbar.php') ?>
+    <?php require_once('../navbar.php') ?>
 
     <h2 id="HeadLine">BEJELENTKEZÉS</h2>
 
-    <?php if(isset($is_invalid) && $is_invalid): ?>
+    <?php if($is_invalid): ?>
         <em>Helytelen felhasználónév és/vagy jelszó!</em>
       <?php endif; ?>
     

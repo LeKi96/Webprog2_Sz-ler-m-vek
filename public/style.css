@@ -22,7 +22,7 @@
 }
 
 body {
-  background-image: url("../public/images/background.jpg");
+  background-image: url('../public/images/background.jpg');
   background-size: cover;
   font-family: Arial, sans-serif;
   margin: 0;
