@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 22. 21:10
+-- Létrehozás ideje: 2023. Nov 26. 17:11
 -- Kiszolgáló verziója: 10.4.25-MariaDB
 -- PHP verzió: 8.1.10
 
@@ -29,38 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `felhasznalok` (
   `id` int(11) NOT NULL,
-  `Vezeteknev` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Keresztnev` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Felhasznalonev` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Jelszo` varchar(20) COLLATE utf8mb4_hungarian_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `hirek`
---
-
-CREATE TABLE `hirek` (
-  `id` int(11) NOT NULL,
-  `cim` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `hirszoveg` varchar(1000) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `szerzo` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `kelt` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `velemeny`
---
-
-CREATE TABLE `velemeny` (
-  `id` int(11) NOT NULL,
-  `velemeny` varchar(1000) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `szerzo` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `kelt` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+  `Vezeteknev` varchar(50) NOT NULL,
+  `Keresztnev` varchar(50) NOT NULL,
+  `Felhasznalonev` varchar(50) NOT NULL,
+  `Jelszo` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexek a kiírt táblákhoz
@@ -73,18 +46,6 @@ ALTER TABLE `felhasznalok`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `hirek`
---
-ALTER TABLE `hirek`
-  ADD PRIMARY KEY (`id`);
-
---
--- A tábla indexei `velemeny`
---
-ALTER TABLE `velemeny`
-  ADD PRIMARY KEY (`id`);
-
---
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -92,18 +53,6 @@ ALTER TABLE `velemeny`
 -- AUTO_INCREMENT a táblához `felhasznalok`
 --
 ALTER TABLE `felhasznalok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT a táblához `hirek`
---
-ALTER TABLE `hirek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT a táblához `velemeny`
---
-ALTER TABLE `velemeny`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
