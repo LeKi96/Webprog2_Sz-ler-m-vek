@@ -1,34 +1,25 @@
-<?php require_once('../views/session.php') ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Szélerőművek</title>
-    <link rel="stylesheet" type="text/css" href="../public/style.css" />
-  </head>
-  <body
-    style="
-      background-image: url('../public/images/background.jpg');
-      background-size: cover;
-    "
-  >
-
-  <?php require_once('../navbar.php') ?>
-    <br>
-    <h1>MAGYARORSZÁG SZÉLERŐMŰVEI</h1>
-
-    <div class="homeContainer">
-      <h1>Szélerőművekről</h1>
-      <p id="homeWrite">
+<h1 style="background-color: #333; color: antiquewhite; opacity: 0.9; text-align: center; margin: auto; width: fit-content;
+padding: 5px; border-radius: 5px;">    
+        MAGYARORSZÁG SZÉLERŐMŰVEI
+</h1>
+<br>
+<h2 style="background-color: #333; color: antiquewhite; opacity: 0.9; text-align: center; margin: auto; width: fit-content; 
+border-radius: 5px; padding: 5px;">   Szélerőművekről
+<br>
+</h2>
+<br>
+<h4 style="background-color: #333; color: antiquewhite; opacity: 0.9; text-align: center; margin: auto; width: fit-content;
+padding: 5px; border-radius: 5px;">
+<br>
         Az alternatív energiaforrások fontossága és fenntarthatóság iránti
         érdeklődés egyre növekszik a világ szerte. A szélerőművek olyan
         innovatív technológiai megoldások, amelyek hatalmas potenciált
         rejtene­nek a tiszta energia előállításában. Ezek a hatalmas szerkezetek
         szélenergiát hasznosítanak, és átalakítják azt elektromos árammá,
         miközben minimális környezeti hatással rendelkeznek.
-      </p>
-
-      <p id="homeWrite">
+<br>
+<br>
+<br>
         A szélerőművek előnyei közé tartozik az üvegházhatású gázok
         kibocsátásának minimalizálása, az energiafüggetlenség előmozdítása, és a
         fenntartható energiaforrások kiaknázása. Ezenkívül a technológia
@@ -36,20 +27,5 @@
         megfizethetővé válnak. A weboldalunkon többet megtudhat erről a
         környezetbarát energiaforrásról, és hogyan járul hozzá a jövő
         fenntartható energiaszükségleteinek kielégítéséhez.
-      </p>
-    </div>
-
-
-    <!--Footer-->
-
-    <footer>
-      <div class="footer-content">
-        <p>&copy; 2023 Szélerőművek</p>
-        <ul class="footer-links">
-          <li><a href="homeView.php">Kezdőlap</a></li>
-          <li><a href="currencyView.php">Devizák</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
-</html>
+<br>
+</h4>
